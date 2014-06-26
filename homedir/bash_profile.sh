@@ -1,5 +1,6 @@
 # Add ~/bin to the $PATH
-export PATH="$HOME/bin:$PATH"
+PATH=$PATH:$HOME/.local/bin:$HOME/bin
+export PATH
 
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
@@ -40,9 +41,9 @@ complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes Syste
 
 # Thanks to @tmoitie, adds more tab completion for bash,
 # also when hitting tab twice it will show a list.
-if [ -f $(brew --prefix)/etc/bash_completion ]; then
-    . $(brew --prefix)/etc/bash_completion
-fi
+#if [ -f $(brew --prefix)/etc/bash_completion ]; then
+    #. $(brew --prefix)/etc/bash_completion
+#fi
 
 
 # http://stackoverflow.com/questions/13804382/how-to-automatically-run-bin-bash-login-automatically-in-the-embeded-termin

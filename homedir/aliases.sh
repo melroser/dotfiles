@@ -1,6 +1,7 @@
 # My Aliases
 alias ..='cd ..'
 alias la='ls -a'
+alias cls='clear'
 
 # Enable aliases to be sudo’ed
 alias sudo='sudo '

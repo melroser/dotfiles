@@ -7,7 +7,7 @@
 " TheMelroseR:
     Bundle 'scrooloose/nerdtree'
     "Bundle 'Valloric/YouCompleteMe'
-    Bundle 'Valloric/ListToggle'
+    "Bundle 'Valloric/ListToggle'
     Bundle 'scrooloose/syntastic'
     Bundle 'majutsushi/tagbar'
     "Bundle 'taglist.vim'
