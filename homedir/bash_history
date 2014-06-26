@@ -154,3 +154,5 @@ la
 cd .p
 cd .pip
 tree
+/usr/local/bin/bash
+bash

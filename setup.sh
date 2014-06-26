@@ -40,8 +40,9 @@ ln -s $dir/vim/vimrc.vim ~/.vimrc
 echo "done"
 
 # Install Vundle
-echo "Installing Vundle to ~/.vim/bundles"
+echo "clean bundle dir"
 rm -rf ~/.vim/bundle/*
+echo "Installing Vundle to ~/.vim/bundles"
 git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 vim +PluginInstall +qall
 echo "done"
