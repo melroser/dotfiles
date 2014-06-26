@@ -1,6 +1,9 @@
 # My Aliases
 alias ..='cd ..'
-alias la='ls -a'
+alias ls='ls --color'
+alias l='ls -l'
+alias ll='ls -lA'
+alias la='ls -A'
 alias cls='clear'
 
 # Enable aliases to be sudo’ed

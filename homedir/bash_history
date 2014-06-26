@@ -126,3 +126,31 @@ vim .exports
 brew list
 brew remove boot2docker
 brew remove docker
+ls
+cd
+ls
+source .basrc
+ls -a
+bash .bashrc
+bash .bash_profile
+cd .backup_dotfiles
+la
+ls
+..
+ls
+cd ..
+ls
+source .aliases 
+ls
+ls -a
+rm -rf .backup_dotfiles_2014Y-06-26
+ls
+la
+ls -a
+source .basrch
+la
+ls -a
+la
+cd .p
+cd .pip
+tree

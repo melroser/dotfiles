@@ -1,21 +1,47 @@
+#!/bin/bash
+############################
+# .make.sh
+# This script creates symlinks from the home directory to any desired dotfiles in ~/dotfiles
+############################
 
-mkdir $HOME/.backup_dotfiles
+########## Variables
 
-mv $HOME/.bash* $HOME/.backup_dotfiles/
-mv $HOME/.vim* $HOME/.backup_dotfiles/
+dir=`pwd`/homedir                   # dotfiles directory
+time_stamp=$(date +%Y-%m-%d-%T)
+backup="${HOME}/.backup_dotfiles/${time_stamp}"             # old dotfiles backup directory
 
-export MOBILE_DOTFILES=`pwd`/homedir/
+dotfiles=" aliases  bash_history  bash_profile  bashrc  exports  functions  inputrc  prompt  vim "    # list of files/folders to symlink in homedir
 
-ln -s $MOBILE_DOTFILES/bashrc.sh $HOME/.bashrc
-ln -s $MOBILE_DOTFILES/bash_profile.sh $HOME/.bash_profile
-ln -s $MOBILE_DOTFILES/bash_history.sh $HOME/.bash_history
-ln -s $MOBILE_DOTFILES/aliases.sh $HOME/.aliases
-ln -s $MOBILE_DOTFILES/inputrc.sh $HOME/.inputrc
-ln -s $MOBILE_DOTFILES/prompt.sh $HOME/.prompt
-ln -s $MOBILE_DOTFILES/exports.sh $HOME/.exports
+##########
 
-ln -s $MOBILE_DOTFILES/vim $HOME/.vim
-ln -s $MOBILE_DOTFILES/vim/vimrc.vim $HOME/.vimrc
+# create backup in homedir
+echo "Creating $backup for backup of any existing dotfiles in ~ ..."
+mkdir -p $backup
+echo "done"
 
+# change to the dotfiles directory
+echo -n "Changing to the $dir directory ..."
+cd $dir
+echo "done"
+
+# move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks from the homedir to any files in the ~/dotfiles directory specified in $files
+for file in $dotfiles; do
+    echo "Moving  ~/.$file to $backup ..."
+    mv ~/.$file $backup
+    echo "Creating symlink $dir/$file --> ~/.$file ..."
+    ln -s $dir/$file ~/.$file
+    echo "linked $file"
+done
+
+echo "Moving ~/.vimrc to $backup ..."
+mv $HOME/.vimrc $backup
+echo "Creating symlink  $dir/vim/vimrc.vim --> ~/.vimrc ..."
+ln -s $dir/vim/vimrc.vim ~/.vimrc
+echo "done"
+
+# Install Vundle
+echo "Installing Vundle to ~/.vim/bundles"
+rm -rf ~/.vim/bundle/*
 git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 vim +PluginInstall +qall
+echo "done"
