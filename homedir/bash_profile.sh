@@ -52,7 +52,7 @@ complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes Syste
 echo ""
 echo "------------------------------------------------"
 echo "|                                              |"
-echo "|    >>>>    Mobile Dotfiles Loaded    >>>>    |"
+echo "|    >>>>    Mobile Dotfiles Loaded    <<<<    |"
 echo "|                                              |"
 echo "------------------------------------------------"
 echo ""
