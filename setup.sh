@@ -46,3 +46,6 @@ echo "Installing Vundle to ~/.vim/bundles"
 git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 vim +PluginInstall +qall
 echo "done"
+
+# Create Bash History File
+touch ~/.bash_history
