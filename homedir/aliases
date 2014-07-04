@@ -1,6 +1,6 @@
 # My Aliases
 alias ..='cd ..'
-alias ls='ls --color'
+#alias ls='ls --color'
 alias l='ls -l'
 alias ll='ls -lA'
 alias la='ls -A'
