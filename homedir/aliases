@@ -1,9 +1,14 @@
 # My Aliases
-alias ..='cd ..'
-#alias ls='ls --color'
-alias l='ls -l'
-alias ll='ls -lA'
+alias ls='ls --color=auto -F --indicator-style=file-type --block-size=M'
 alias la='ls -A'
+alias l='ls -1 --group-directories-first'
+alias ll='ls -og -X --time-style=+ --group-directories-first'
+alias lll='ls -ogAH -X --time-style=+%m:%d" "%R --group-directories-first'
+alias llll='ls -alH -X --time-style=+%c --group-directories-first'
+
+alias ..='cd ..'
+alias ...='cd ../..'
+
 alias cls='clear'
 
 # Enable aliases to be sudo’ed
@@ -21,8 +26,8 @@ alias ips="ifconfig -a | grep -o 'inet6\? \(addr:\)\?\s\?\(\(\([0-9]\+\.\)\{3\}[
 alias whois="whois -h whois-servers.net"
 
 # View HTTP traffic
-alias sniff="sudo ngrep -d 'en1' -t '^(GET|POST) ' 'tcp and port 80'"
-alias httpdump="sudo tcpdump -i en1 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET \/.*\""
+alias sniff="sudo ngrep -d 'wlan0' -t '^(GET|POST) ' 'tcp and port 80'"
+alias httpdump="sudo tcpdump -i wlan0 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET \/.*\""
 
 # Trim new lines and copy to clipboard
 alias c="tr -d '\n' | pbcopy"
@@ -67,11 +72,10 @@ for method in GET HEAD POST PUT DELETE TRACE OPTIONS; do
     alias "$method"="lwp-request -m '$method'"
 done
 
-# Make Grunt print stack traces by default
-command -v grunt > /dev/null && alias grunt="grunt --stack"
-
 # Lock the screen (when going AFK)
 alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
 
 # Faster npm for europeans
 # command -v npm > /dev/null && alias npme="npm --registry http://registry.npmjs.eu"
+
+
