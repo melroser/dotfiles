@@ -41,8 +41,11 @@ complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes Syste
 
 # Thanks to @tmoitie, adds more tab completion for bash,
 # also when hitting tab twice it will show a list.
-#if [ -f $(brew --prefix)/etc/bash_completion ]; then
-    #. $(brew --prefix)/etc/bash_completion
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+    . $(brew --prefix)/etc/bash_completion
+fi
+#if [ -f $(brew --prefix)/share/bash-completion/bash_completion ]; then
+    #. $(brew --prefix)/share/bash-completion/bash_completion
 #fi
 
 
@@ -51,8 +54,6 @@ complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes Syste
 
 echo ""
 echo "------------------------------------------------"
-echo "|                                              |"
 echo "|    >>>>    Mobile Dotfiles Loaded    <<<<    |"
-echo "|                                              |"
 echo "------------------------------------------------"
 echo ""
