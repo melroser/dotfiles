@@ -6,6 +6,9 @@ alias ll='ls -lA'
 alias la='ls -A'
 alias cls='clear'
 
+alias rm="echo Use del, or full path name for rm"
+alias del="rmtrash" #del is shorter as rmtrash, or simply use rmtrash directly
+
 # Enable aliases to be sudo’ed
 alias sudo='sudo '
 
