@@ -29,13 +29,7 @@ export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/cspshare/opt/lib/boost/lib"
 
 # Java Path
-<<<<<<< HEAD
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home
-
-export BOOST_ROOT='/usr/local/Cellar/boost/1.55.0_2'
-=======
 export JAVA_HOME='/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home'
 
+# Boost Root
 export BOOST_ROOT='/usr/local/Cellar/boost/1.55.0_2'
-
->>>>>>> aa024c049b212f4c1d414d9d07d884bdde7f19a3
