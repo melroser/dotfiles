@@ -33,3 +33,10 @@ export JAVA_HOME='/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Hom
 
 # Boost Root
 export BOOST_ROOT='/usr/local/Cellar/boost/1.55.0_2'
+
+# Add ~/bin to the $PATH
+PATH=$HOME/.local/bin:$HOME/bin:/usr/local/bin:$PATH
+PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+export PATH
+
+export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
