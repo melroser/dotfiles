@@ -40,16 +40,12 @@ complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes Syste
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
     . $(brew --prefix)/etc/bash_completion
 fi
-#if [ -f $(brew --prefix)/share/bash-completion/bash_completion ]; then
-    #. $(brew --prefix)/share/bash-completion/bash_completion
-#fi
-
 
 # http://stackoverflow.com/questions/13804382/how-to-automatically-run-bin-bash-login-automatically-in-the-embeded-termin
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 echo ""
 echo "------------------------------------------------"
-echo "|    >>>>    Mobile Dotfiles Loaded    <<<<    |"
+echo "|    >>>>    Custom Dotfiles Loaded    <<<<    |"
 echo "------------------------------------------------"
 echo ""

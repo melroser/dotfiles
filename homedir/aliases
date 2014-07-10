@@ -1,5 +1,12 @@
 # My Aliases
-alias ls='ls --color=auto -F --indicator-style=file-type --block-size=M'
+
+# Customize ls
+if [ "$TERM" != "dumb" ]; then
+    export LS_OPTIONS='--color=auto'
+    eval `dircolors ~/.dir_colors`
+fi
+
+alias ls='ls $LS_OPTIONS -F --indicator-style=file-type --block-size=M'
 alias la='ls -A'
 alias l='ls -1 --group-directories-first'
 alias ll='ls -og -X --time-style=+ --group-directories-first'

@@ -10,7 +10,7 @@ dir=`pwd`/homedir                   # dotfiles directory
 time_stamp=$(date +%Y-%m-%d-%T)
 backup="${HOME}/.backup_dotfiles/${time_stamp}"             # old dotfiles backup directory
 
-dotfiles=" aliases  bash_profile  bashrc  exports  functions  inputrc  prompt  vim "    # list of files/folders to symlink in homedir
+dotfiles=" aliases  bash_profile  bashrc dir_colors  exports  functions  inputrc  prompt  vim "    # list of files/folders to symlink in homedir
 
 ##########
 
