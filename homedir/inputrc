@@ -32,11 +32,11 @@ set output-meta on
 set convert-meta off
 
 # Terminal colours (after installing GNU coreutils)
-NM="\[\033[0;38m\]" #means no background and white lines
-HI="\[\033[0;37m\]" #change this for letter colors
-HII="\[\033[0;31m\]" #change this for letter colors
-SI="\[\033[0;33m\]" #this is for the current directory
-IN="\[\033[0m\]"
+#NM="\[\033[0;38m\]" #means no background and white lines
+#HI="\[\033[0;37m\]" #change this for letter colors
+#HII="\[\033[0;31m\]" #change this for letter colors
+#SI="\[\033[0;33m\]" #this is for the current directory
+#IN="\[\033[0m\]"
 
 # Use the text that has already been typed as the prefix for searching through
 # commands (i.e. more intelligent Up/Down behavior)

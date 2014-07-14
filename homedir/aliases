@@ -1,5 +1,15 @@
 # My Aliases
 
+# Enable color support of ls and also add handy aliases
+#if [ -x /usr/bin/dircolors ]; then
+    #test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+    #alias ls='ls --color=auto'
+    #alias dir='dir --color=auto'
+    #alias vdir='vdir --color=auto'
+    #alias grep='grep --color=auto'
+    #alias fgrep='fgrep --color=auto'
+    #alias egrep='egrep --color=auto'
+#fi
 # Customize ls
 if [ "$TERM" != "dumb" ]; then
     export LS_OPTIONS='--color=auto'
@@ -15,6 +25,12 @@ alias llll='ls -alH -X --time-style=+%c --group-directories-first'
 
 alias ..='cd ..'
 alias ...='cd ../..'
+alias ....='cd ../../..'
+alias .....='cd ../../../..'
+
+#alias -g ...='../..'
+#alias -g ....='../../..'
+#alias -g .....='../../../..'
 
 alias cls='clear'
 
@@ -53,8 +69,8 @@ alias rot13='tr a-zA-Z n-za-mN-ZA-M'
 alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo rm -rfv /private/var/log/asl/*.asl"
 
 # Show/hide hidden files in Finder
-alias show="defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder"
-alias hide="defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder"
+alias showfiles="defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder"
+alias hidefiles="defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder"
 
 # Hide/show all desktop icons (useful when presenting)
 alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
@@ -89,3 +105,28 @@ alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resource
 # command -v npm > /dev/null && alias npme="npm --registry http://registry.npmjs.eu"
 
 
+alias bgui='sudo /usr/bin/python /usr/local/lib/python2.7/site-packages/build_gui.py &'
+alias csp='sudo sh /reli/appl/gemstargui/bin/gemstargui.sh &'
+
+# copy with a progress bar.
+alias cpv='rsync -poghb --backup-dir=/tmp/rsync -e /dev/null --progress --'
+
+# Virtualenv
+menuvirtualenv() {
+    select env in `lsvirtualenv -b`; do
+        if [ -n "$env" ]; then
+            workon "$env"
+        fi;
+        break;
+    done;
+}
+alias v.open='workon'
+alias v.on='menuvirtualenv'
+alias v.off='deactivate'
+alias v.mk='mkvirtualenv --no-site-packages'
+alias v.mk_withsp='mkvirtualenv'
+alias v.rm='rmvirtualenv'
+alias v.cd='cdvirtualenv'
+alias v.cdpack='cdsitepackages'
+alias v.lspack='lssitepackages'
+alias v.add2venv='add2virtualenv'
