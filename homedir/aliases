@@ -11,12 +11,12 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=auto'
 fi
 ## Customize ls
-#if [ "$TERM" != "dumb" ]; then
-    #export LS_OPTIONS='--color=auto'
-    #eval `dircolors ~/.dir_colors`
-#fi
+if [ "$TERM" != "dumb" ]; then
+    export LS_OPTIONS='--color=auto'
+    eval `dircolors ~/.dir_colors`
+fi
 
-alias ls='ls -F --indicator-style=file-type --block-size=M'
+alias ls='ls $LS_OPTIONS -F --indicator-style=file-type --block-size=M'
 alias la='ls -A'
 alias l='ls -1 --group-directories-first'
 alias ll='ls -og -X --time-style=+ --group-directories-first'
