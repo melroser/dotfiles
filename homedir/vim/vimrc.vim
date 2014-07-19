@@ -369,13 +369,16 @@
         "endif
     " }
     
-    " ---------- Airline-Tomato --------------------
+    " ---------- Vim Markdown --------------------
     " {
         "let g:tomato#interval = 60*60
         "let g:tomato#rest_time = 20*60
         "let g:tomato#auto_reset_num = 24
         "let g:tomato#remind = "☻"
         "let g:tomato#restinfo = "☺"
+        "let g:vim_markdown_folding_disabled=1
+        let g:vim_markdown_initial_foldlevel=1
+        let g:vim_markdown_no_default_key_mappings=1
     " }
     " ---------- NerdTree --------------------
     " {
@@ -450,7 +453,9 @@
             au FileType python let g:filetype_python=1
             au FileType make let g:filetype_make=1
             au FileType vim let g:filetype_vim=1
-            au FileType Mardown let g:filetype_markdown=1
+            au FileType markdown let g:filetype_markdown=1
+            au FileType c let g:filetype_c=1
+            au FileType cpp let g:filetype_cpp=1
             au BufNewFile,BufRead *.json set ft=javascript
         endif
         "}
@@ -472,8 +477,7 @@
             set softtabstop=4                       " Insert/delete 4 spaces when hitting  BACKSPACE
             set shiftwidth=4                        " Selection indent 4 spaces
             set shiftround                          " Round indent to multiple of 'shiftwidth'
-
-            set textwidth=80
+            set textwidth=120
         endif
     " }
     " ---------- Java Script --------------------
@@ -541,7 +545,7 @@
     " }
     " ---------- C++ --------------------
     " {
-        if exists('g:filetype_c++')
+        if exists('g:filetype_c')
             set exrc
             set secure
             set tabstop=4

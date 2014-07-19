@@ -26,7 +26,8 @@ export GREP_OPTIONS='--color=auto'
 export HOMEBREW_CASK_OPTS='--appdir=/Applications'
 
 # Link the Boost libraries
-export LD_LIBRARY_PATH='$LD_LIBRARY_PATH:/cspshare/opt/lib/boost/lib'
+#export LD_LIBRARY_PATH='$HOME/pool/lib:${LD_LIBRARY_PATH}'
+export LD_LIBRARY_PATH='$LD_LIBRARY_PATH:/usr/local/Cellar/boost/1.55.0_2/lib'
 
 # Java Path
 export JAVA_HOME='/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home'
