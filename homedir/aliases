@@ -10,6 +10,7 @@ if [ -x /usr/bin/dircolors ]; then
     alias fgrep='fgrep --color=auto'
     alias egrep='egrep --color=auto'
 fi
+
 ## Customize ls
 if [ "$TERM" != "dumb" ]; then
     export LS_OPTIONS='--color=auto'
@@ -109,7 +110,7 @@ alias bgui='sudo /usr/bin/python /usr/local/lib/python2.7/site-packages/build_gu
 alias csp='sudo sh /reli/appl/gemstargui/bin/gemstargui.sh &'
 
 # copy with a progress bar.
-alias cpv='rsync -poghb --backup-dir=/tmp/rsync -e /dev/null --progress --'
+alias cp='rsync -poghb --backup-dir=/tmp/rsync -e /dev/null --progress --'
 
 # Virtualenv
 menuvirtualenv() {
@@ -120,6 +121,7 @@ menuvirtualenv() {
         break;
     done;
 }
+
 alias v.open='workon'
 alias v.on='menuvirtualenv'
 alias v.off='deactivate'
@@ -130,3 +132,6 @@ alias v.cd='cdvirtualenv'
 alias v.cdpack='cdsitepackages'
 alias v.lspack='lssitepackages'
 alias v.add2venv='add2virtualenv'
+
+alias update_all='brew update && brew upgrade && brew doctor && pip install --upgrade setuptools && pip install --upgrade pip'
+
