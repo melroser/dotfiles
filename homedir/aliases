@@ -133,5 +133,5 @@ alias v.cdpack='cdsitepackages'
 alias v.lspack='lssitepackages'
 alias v.add2venv='add2virtualenv'
 
-alias update_all='brew update && brew upgrade && brew doctor && pip install --upgrade setuptools && pip install --upgrade pip'
+alias update_all='brew update && brew upgrade && brew doctor && v.open update && pip install --upgrade setuptools && pip install --upgrade pip && v.off'
 
