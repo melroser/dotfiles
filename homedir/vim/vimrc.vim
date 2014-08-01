@@ -210,17 +210,16 @@
 " }
 
 " Eyecandy:
-" {
+"" {
     " ---------- General --------------------
     " {
         " Fonts:
         if has('gui')
-            " set guifont=Monofonto:h24
+            "set guifont=Monofonto:h24
             " set guifont=Meslo\ LG\ S\ for\ Powerline:h14
             " set guifont=Source\ Code\ Pro\ for\ Powerline:h14
             " set guifont=Anonymous\ Pro\ for\ powerline:h16
-            " set guifont=Ubuntu\ Mono\ derivative\ Powerline:h20
-            " set guifont=Inconsolata\ for\ Powerline:h24
+            set guifont=Ubuntu\ Mono\ derivative\ Powerline:h20
             " set guifont=Inconsolata\ for\ Powerline:h24
         endif
 
@@ -242,6 +241,7 @@
     " }
     " ---------- Colorscheme --------------------
     " {
+        set guifont=Ubuntu\ Mono\ derivative\ Powerline:h20
         " Allow color schemes to do bright colors without forcing bold.
         if &t_Co == 8 && $TERM !~# '^linux'
             set t_Co=16
@@ -249,8 +249,8 @@
 
 
         set background=dark
-        "colorscheme Monokai " Load a colorscheme
-        colorscheme slate " Load a colorscheme
+        colorscheme molokai " Load a colorscheme
+        "colorscheme slate " Load a colorscheme
 
     " }
     " ---------- Statusline --------------------
@@ -354,12 +354,24 @@
 " {
     " ---------- Airline --------------------
     " {
-        let g:airline_powerline_fonts = 1
+        let g:airline_enable_branch     = 1
+        let g:airline_enable_syntastic  = 1
+        let g:Powerline_symbols = 'fancy'
+
+        " vim-powerline symbols
+        "let g:airline_left_sep          = '⮀'
+        "let g:airline_left_alt_sep      = '⮁'
+        "let g:airline_right_sep         = '⮂'
+        "let g:airline_right_alt_sep     = '⮃'
+        "let g:airline_branch_prefix     = '⭠'
+        "let g:airline_readonly_symbol   = '⭤'
+        "let g:airline_linecolumn_prefix = '⭡'
+        "let g:airline_powerline_fonts = 1
+        "let g:airline_theme = 'molokai'
+        let g:airline_theme             = 'powerlineish'
         "let g:airline_theme = 'base16'
         "let g:airline_theme = 'wombat'
         "let g:airline_theme = 'solarized'
-        "let g:airline_theme = 'sol'
-        let g:airline_theme = 'molokai'
         "let g:airline_theme = 'sol'
         "let g:no_power_fonts=1
         "if !exists('g:no_power_fonts')
@@ -368,7 +380,7 @@
             "let g:airline_right_sep='‹' " Slightly fancier than '<'
         "endif
     " }
-    
+
     " ---------- Vim Markdown --------------------
     " {
         "let g:tomato#interval = 60*60
