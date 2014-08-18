@@ -23,7 +23,9 @@ Hit the ENTER key when it starts installing vim addons.
 
 Now re-init your bash shell.
 
-When its all finished cd into the YouCompleteMe plugin folder which should be located in ~/.vim/bundle/YouCompleteMe.
+When its all finished cd into the YouCompleteMe plugin folder which should be located:
+
+    cd ~/.vim/bundle/YouCompleteMe
 
 Run the tests to check for the dependencies for clang, nose, pep8, pyflakes, etc. 
 
