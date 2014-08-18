@@ -32,13 +32,15 @@ export LD_LIBRARY_PATH='$LD_LIBRARY_PATH:/cspshare/opt/lib/boost/lib'
 export JAVA_HOME='/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home'
 
 # Boost Root
-export BOOST_ROOT='/usr/local/Cellar/boost/1.55.0_2'
+export BOOST_ROOT='/cspshare/opt/lib/boost'
 
 # Add ~/bin to the $PATH
-export PATH="$HOME/.local/bin:$HOME/bin:/usr/local/bin:$PATH"
-export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+#export PATH="$HOME/.locl/bin:$HOME/bin:/usr/local/bin:$PATH"
+#export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 #export PATH
 
-export MANPATH='/usr/local/opt/coreutils/libexec/gnuman:$MANPATH'
+#export MANPATH='/usr/local/opt/coreutils/libexec/gnuman:$MANPATH'
 
 export WORKON_HOME='~/.venv'
+
+export PYTHON_HOME='/lib/python2.7'

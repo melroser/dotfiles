@@ -35,7 +35,7 @@ alias .....='cd ../../../..'
 alias cls='clear'
 
 alias rm="echo Use del, or full path name for rm"
-alias del="rmtrash" #del is shorter as rmtrash, or simply use rmtrash directly
+alias del="ptrash"  #Alias to delete so we dont learn bad habits
 
 # Enable aliases to be sudo’ed
 alias sudo='sudo '
