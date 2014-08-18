@@ -45,8 +45,13 @@ complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes Syste
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 # Virtualenv Stuffs:
-source virtualenvwrapper_lazy.sh
+if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
+    source virtualenvwrapper.sh
+fi
 
+syspip(){
+   PIP_REQUIRE_VIRTUALENV="" pip "$@"
+}
 echo ""
 echo "------------------------------------------------"
 echo "|    >>>>    Custom Dotfiles Loaded    <<<<    |"
