@@ -215,11 +215,12 @@
     " {
         " Fonts:
         if has('gui')
+            "set guifont=Ubuntu Mono:h18
+            set guifont=PowerlineSymbols:h18
             "set guifont=Monofonto:h24
             " set guifont=Meslo\ LG\ S\ for\ Powerline:h14
             " set guifont=Source\ Code\ Pro\ for\ Powerline:h14
             " set guifont=Anonymous\ Pro\ for\ powerline:h16
-            set guifont=Ubuntu\ Mono\ derivative\ Powerline:h20
             " set guifont=Inconsolata\ for\ Powerline:h24
         endif
 
@@ -241,7 +242,7 @@
     " }
     " ---------- Colorscheme --------------------
     " {
-        set guifont=Ubuntu\ Mono\ derivative\ Powerline:h20
+        "set guifont=Ubuntu\ Mono\ derivative\ Powerline:h20
         " Allow color schemes to do bright colors without forcing bold.
         if &t_Co == 8 && $TERM !~# '^linux'
             set t_Co=16
@@ -367,8 +368,8 @@
         "let g:airline_readonly_symbol   = '⭤'
         "let g:airline_linecolumn_prefix = '⭡'
         "let g:airline_powerline_fonts = 1
-        "let g:airline_theme = 'molokai'
-        let g:airline_theme             = 'powerlineish'
+        let g:airline_theme = 'molokai'
+        "let g:airline_theme             = 'powerlineish'
         "let g:airline_theme = 'base16'
         "let g:airline_theme = 'wombat'
         "let g:airline_theme = 'solarized'
