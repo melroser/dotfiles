@@ -665,6 +665,6 @@
 " Modlines:
 " {
     " mvim: set nospell:
-    " vim: set foldmarker={,} foldlevel=0 foldmethod=marker nospell:
+    " vim: set foldmarker={,} foldlevel=1 foldmethod=marker nospell:
     " vi: set nospell:
 " }
