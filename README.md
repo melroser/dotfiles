@@ -1,29 +1,25 @@
-mobile_dotfiles
-===============
+dotfiles
+========
 
-Simplified dotfiles for setting up a remote development over ssh
+Customized dotfiles for quickly and easily setting up a development environment from the shell.
 
 Install Guide
 -------------
 
-Begin by chosing where you would like to keep your new dotfiles. When you run the setup script they 
-will by symlinked to your home folder. I use ~/Workspace/util
+Begin by chosing where you would like to keep your new dotfiles. When you run the setup script all the dotfiles in homedir will be symlinked to your home folder. I typically use ~/Workspace/util
 
-cd into that directory:
+cd into the install directory:
 
     cd ~/Workspace/util
-
-    git clone https://github.com/melroser/mobile_dotfiles.git
-
-    cd mobile_dotfiles
-
+    git clone https://github.com/melroser/dotfiles.git
+    cd dotfiles
     sh setup.sh
 
-Hit the ENTER key when it starts installing vim addons.
+Hit the ENTER key when vundle begins installing your vim addons.
 
 Now re-init your bash shell.
 
-When its all finished cd into the YouCompleteMe plugin folder which should be located:
+When its all finished cd into the YouCompleteMe plugin folder which should be located in:
 
     cd ~/.vim/bundle/YouCompleteMe
 
@@ -34,7 +30,6 @@ Run the tests to check for the dependencies for clang, nose, pep8, pyflakes, etc
 If all goes well:
 
     sh install.sh
-
 
 Now re-init your bash shell one last time.
 
