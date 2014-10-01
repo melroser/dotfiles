@@ -37,16 +37,14 @@ export BOOST_ROOT='/cspshare/opt/lib/boost'
 
 # Add ~/bin to the $PATH
 #export PATH="$HOME/.locl/bin:$HOME/bin:/usr/local/bin:$PATH"
-#export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 #export PATH
 
-#export MANPATH='/usr/local/opt/coreutils/libexec/gnuman:$MANPATH'
+export MANPATH='/usr/local/opt/coreutils/libexec/gnuman:$MANPATH'
 
 export WORKON_HOME='~/.venv'
 
-<<<<<<< HEAD
 export PYTHON_HOME='/lib/python2.7'
-=======
 # pip should only run if there is a virtualenv currently activated
 export PIP_REQUIRE_VIRTUALENV='true'
 # cache pip-installed packages to avoid re-downloading
@@ -55,4 +53,3 @@ export PIP_DOWNLOAD_CACHE='$HOME/.pip/cache'
 
 #LDFLAGS:  -L/usr/local/opt/sqlite/lib
 #CPPFLAGS: -I/usr/local/opt/sqlite/include
->>>>>>> b6536c7708d1cab25934101a4adbc7b91edbc8ba
