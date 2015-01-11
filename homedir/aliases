@@ -15,6 +15,10 @@ alias .....='cd ../../../..'
 # Enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+    ## Customize ls
+    if [ "$TERM" != "dumb" ]; then
+        eval `dircolors ~/.dir_colors`
+    fi
     alias ls='ls -F --color=auto --indicator-style=file-type --block-size=M'
     alias l='ls -1 --group-directories-first'
     alias ll='ls -og -X --time-style=+ --group-directories-first'
@@ -27,10 +31,6 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=auto'
 fi
 
-## Customize ls
-if [ "$TERM" != "dumb" ]; then
-    eval `dircolors ~/.dir_colors`
-fi
 
 # Deletion
 alias cls='clear'
