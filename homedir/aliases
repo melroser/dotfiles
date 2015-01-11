@@ -1,9 +1,25 @@
 # My Aliases
+alias ls='ls -F'
+alias la='ls -A'
+alias l='ls -1'
+alias ll='ls -og'
+alias lll='ls -ogAH'
+alias llll='ls -alH'
+
+# Directory Movement
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias .....='cd ../../../..'
 
 # Enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-    alias ls='ls --color=auto'
+    alias ls='ls -F --color=auto --indicator-style=file-type --block-size=M'
+    alias l='ls -1 --group-directories-first'
+    alias ll='ls -og -X --time-style=+ --group-directories-first'
+    alias lll='ls -ogAH -X --time-style=+%m:%d" "%R --group-directories-first'
+    alias llll='ls -alH -X --time-style=+%c --group-directories-first'
     alias dir='dir --color=auto'
     alias vdir='vdir --color=auto'
     alias grep='grep --color=auto'
@@ -13,28 +29,11 @@ fi
 
 ## Customize ls
 if [ "$TERM" != "dumb" ]; then
-    export LS_OPTIONS='--color=auto'
     eval `dircolors ~/.dir_colors`
 fi
 
-alias ls='ls $LS_OPTIONS -F --indicator-style=file-type --block-size=M'
-alias la='ls -A'
-alias l='ls -1 --group-directories-first'
-alias ll='ls -og -X --time-style=+ --group-directories-first'
-alias lll='ls -ogAH -X --time-style=+%m:%d" "%R --group-directories-first'
-alias llll='ls -alH -X --time-style=+%c --group-directories-first'
-
-alias ..='cd ..'
-alias ...='cd ../..'
-alias ....='cd ../../..'
-alias .....='cd ../../../..'
-
-#alias -g ...='../..'
-#alias -g ....='../../..'
-#alias -g .....='../../../..'
-
+# Deletion
 alias cls='clear'
-
 alias rm="echo Use del, or full path name for rm"
 alias del="ptrash"  #Alias to delete so we dont learn bad habits
 
