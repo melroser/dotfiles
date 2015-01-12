@@ -54,7 +54,7 @@ syspip(){
 }
 echo ""
 echo "------------------------------------------------"
-echo "|    >>>>    Custom Dotfiles Loaded    <<<<    |"
+echo "|  >>>>    melroser's dotfiles loaded    <<<<  |"
 echo "------------------------------------------------"
 echo ""
 

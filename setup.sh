@@ -43,3 +43,6 @@ echo "done"
 
 # create a file for command history
 touch ~/.bash_history
+
+# install vundle
+source ./scripts/vundle_setup.sh

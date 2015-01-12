@@ -4,7 +4,7 @@
 
 " TheMelroseR:
     Bundle 'scrooloose/nerdtree'
-    Bundle 'Valloric/YouCompleteMe'
+    "Bundle 'Valloric/YouCompleteMe'
     Bundle 'scrooloose/syntastic'
     Bundle 'scrooloose/nerdcommenter'
     Bundle 'majutsushi/tagbar'
