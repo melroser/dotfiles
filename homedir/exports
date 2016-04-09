@@ -1,4 +1,7 @@
+export TRACE="$TRACE\n$BASH_SOURCE --> $(~/.tracedots/libs/realpath/realpath -L $BASH_SOURCE)"
+
 # Make vim the default editor
+
 export EDITOR='vim'
 
 # Larger bash history (allow 32³ entries; default is 500)

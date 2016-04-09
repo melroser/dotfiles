@@ -1,4 +1,4 @@
-
+export TRACE="$TRACE\n$BASH_SOURCE --> $(~/.tracedots/libs/realpath/realpath -L $BASH_SOURCE)"
 
 # Determine size of a file or total size of a directory
 function fs() {

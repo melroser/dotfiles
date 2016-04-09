@@ -1,7 +1,7 @@
-# Load the shell dotfiles, and then some:
-# * ~/.path can be used to extend `$PATH`.
-# * ~/.extra can be used for other settings you don’t want to commit.
-for file in ~/.{path,prompt,exports,aliases,functions,extra,inputrc}; do
+export TRACE="$TRACE\n$BASH_SOURCE --> $(~/.tracedots/libs/realpath/realpath -L $BASH_SOURCE)"
+
+# Source the other dotfiles
+for file in ~/.{exports,path,prompt,aliases,functions,extra,inputrc}; do
     [ -r "$file" ] && [ -f "$file" ] && source "$file"
 done
 unset file
@@ -37,9 +37,9 @@ complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes Syste
 
 # Thanks to @tmoitie, adds more tab completion for bash,
 # also when hitting tab twice it will show a list.
-#if [ -f $(brew --prefix)/etc/bash_completion ]; then
-    #. $(brew --prefix)/etc/bash_completion
-#fi
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+    . $(brew --prefix)/etc/bash_completion
+fi
 
 # http://stackoverflow.com/questions/13804382/how-to-automatically-run-bin-bash-login-automatically-in-the-embeded-termin
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
@@ -58,11 +58,18 @@ echo "|  >>>>    melroser's dotfiles loaded    <<<<  |"
 echo "------------------------------------------------"
 echo ""
 
+# Metasploit Binaries
+export PATH="/opt/metasploit-framework/bin:$PATH"
+
 ##
 # Your previous /Users/robert/.bash_profile file was backed up as /Users/robert/.bash_profile.macports-saved_2014-08-13_at_23:34:53
 ##
 
 # MacPorts Installer addition on 2014-08-13_at_23:34:53: adding an appropriate PATH variable for use with MacPorts.
 export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
-# Finished adapting your PATH environment variable for use with MacPorts.
 
+# Finished adapting your PATH environment variable for use with MacPorts.
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
+# Source Tracedots
+source ~/.tracedots/tracedots.sh

@@ -4,7 +4,7 @@
 
 " TheMelroseR:
     Bundle 'scrooloose/nerdtree'
-    "Bundle 'Valloric/YouCompleteMe'
+    Bundle 'Valloric/YouCompleteMe'
     Bundle 'scrooloose/syntastic'
     Bundle 'scrooloose/nerdcommenter'
     Bundle 'majutsushi/tagbar'
@@ -19,6 +19,7 @@
     Bundle 'wincent/Command-T'
     Plugin 'godlygeek/tabular'
     Plugin 'plasticboy/vim-markdown'
+    Plugin 'ryanss/vim-hackernews'
     "Bundle 'xolox/vim-session'
     "Bundle 'airblade/vim-gitgutter'
     "Bundle 'msanders/snipmate.vim'

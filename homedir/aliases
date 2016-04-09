@@ -1,3 +1,5 @@
+export TRACE="$TRACE\n$BASH_SOURCE --> $(~/.tracedots/libs/realpath/realpath -L $BASH_SOURCE)"
+
 # My Aliases
 alias ls='ls -F'
 alias la='ls -A'
@@ -31,11 +33,14 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=auto'
 fi
 
-
-# Deletion
+# Clear Screen
 alias cls='clear'
-alias rm="echo Use del, or full path name for rm"
-alias del="ptrash"  #Alias to delete so we dont learn bad habits
+
+# Disables rm to remind us to use del
+if [ -f $(brew --prefix)/bin/rmtrash ]; then
+    alias rm="echo Use del, or full path name for rm"
+    alias del="rmtrash" 
+fi
 
 # Enable aliases to be sudo’ed
 alias sudo='sudo '
@@ -133,4 +138,3 @@ alias v.lspack='lssitepackages'
 alias v.add2venv='add2virtualenv'
 
 alias update_all='brew update && brew upgrade && brew doctor && v.open update && pip install --upgrade setuptools && pip install --upgrade pip && v.off'
-
