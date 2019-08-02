@@ -1,1 +1,1 @@
-export TRACE="$TRACE\n$BASH_SOURCE --> $(~/.tracedots/libs/realpath/realpath -L $BASH_SOURCE)"
+export TRACE="$TRACE\n$BASH_SOURCE --> $(realpath -L $BASH_SOURCE)"

@@ -1,4 +1,4 @@
-export TRACE="$TRACE\n$BASH_SOURCE --> $(~/.tracedots/libs/realpath/realpath -L $BASH_SOURCE)"
+export TRACE="$TRACE\n$BASH_SOURCE --> $(realpath -L $BASH_SOURCE)"
 
 # Make vim the default editor
 
@@ -33,7 +33,8 @@ export HOMEBREW_CASK_OPTS='--appdir=/Applications'
 export LD_LIBRARY_PATH='$LD_LIBRARY_PATH:/usr/local/Cellar/boost/1.55.0_2/lib'
 
 # Java Path
-export JAVA_HOME='/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home'
+#export JAVA_HOME='/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home'
+export JAVA_HOME='/Library/Java/JavaVirtualMachines/jdk1.8.0_211.jdk/Contents/Home'
 
 # Boost Root
 export BOOST_ROOT='/cspshare/opt/lib/boost'

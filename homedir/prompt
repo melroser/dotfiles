@@ -1,4 +1,4 @@
-export TRACE="$TRACE\n$BASH_SOURCE --> $(~/.tracedots/libs/realpath/realpath -L $BASH_SOURCE)"
+export TRACE="$TRACE\n$BASH_SOURCE --> $(realpath -L $BASH_SOURCE)"
 
 # @gf3’s Sexy Bash Prompt, inspired by “Extravagant Zsh Prompt”
 # Shamelessly copied from https://github.com/gf3/dotfiles

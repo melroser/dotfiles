@@ -1,3 +1,5 @@
+#export TRACE="$TRACE\n$BASH_SOURCE --> $(realpath -L $BASH_SOURCE)"
+
 # Make Tab autocomplete regardless of filename case
 set completion-ignore-case on
 

@@ -1,4 +1,4 @@
-export TRACE="$TRACE\n$BASH_SOURCE --> $(~/.tracedots/libs/realpath/realpath -L $BASH_SOURCE)"
+export TRACE="$TRACE\n$BASH_SOURCE --> $(realpath -L $BASH_SOURCE)"
 
 # Source the other dotfiles
 for file in ~/.{exports,path,prompt,aliases,functions,extra,inputrc}; do
@@ -52,10 +52,16 @@ fi
 syspip(){
    PIP_REQUIRE_VIRTUALENV="" pip "$@"
 }
+tracedot
+echo ""
+echo ""
 echo ""
 echo "------------------------------------------------"
-echo "|  >>>>    melroser's dotfiles loaded    <<<<  |"
+echo "                                                "
+echo "           melroser's dotfiles loaded           "
+echo "                                                "
 echo "------------------------------------------------"
+echo ""
 echo ""
 
 # Metasploit Binaries
@@ -72,4 +78,17 @@ export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 # Source Tracedots
-source ~/.tracedots/tracedots.sh
+#source ~/.tracedots/tracedots.sh
+
+# added by Anaconda2 5.2.0 installer
+export PATH="/anaconda2/bin:$PATH"
+
+
+if [ -f /usr/local/share/bash-completion/bash_completion ]; then
+    . /usr/local/share/bash-completion/bash_completion
+fi
+
+# added flutter to path
+export PATH="$PATH:~/Workspace/flutter/bin"
+
+#export JAVA_HOME=`/usr/libexec/java_home`
