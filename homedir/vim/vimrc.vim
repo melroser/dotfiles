@@ -5,9 +5,9 @@
     " Metadata
     " {
         " Name: Vimrc.vim"{"}
-        " Author: Robert Melrose <themelroser@gmail.com>
-        " Version: 0.2.0
-        " Copyright: (C) 2013 Robert R Melrose (aka melroser)
+        " Author: Robert Melrose <themelroser@gmail.com> melroser.com
+        " Version: 0.2.1
+        " Copyright: (C) 2019 Robert R Melrose (aka themelroser)
         " License: lgplv3 (http://www.gnu.org/licenses/lgpl.html)
         " Source: [Github](http://www.github.com/melroser/dotfiles)
     " }
@@ -33,7 +33,7 @@
         call vundle#begin()
 
         " let Vundle manage Vundle, required
-        Plugin 'gmarik/Vundle.vim'
+        Plugin 'VundleVim/Vundle.vim'
 
         " Load plugins from vundles.vim
         if filereadable(expand("~/.vim/vundles.vim"))
