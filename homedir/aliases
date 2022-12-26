@@ -117,24 +117,24 @@ alias csp='sudo sh /reli/appl/gemstargui/bin/gemstargui.sh &'
 alias cp='rsync -poghb --backup-dir=/tmp/rsync -e /dev/null --progress --'
 
 # Virtualenv
-menuvirtualenv() {
-    select env in `lsvirtualenv -b`; do
-        if [ -n "$env" ]; then
-            workon "$env"
-        fi;
-        break;
-    done;
-}
+#menuvirtualenv() {
+#    select env in `lsvirtualenv -b`; do
+#        if [ -n "$env" ]; then
+#            workon "$env"
+#        fi;
+#        break;
+#    done;
+#}
 
-alias v.open='workon'
-alias v.on='menuvirtualenv'
-alias v.off='deactivate'
-alias v.mk='mkvirtualenv --no-site-packages'
-alias v.mk_withsp='mkvirtualenv'
-alias v.rm='rmvirtualenv'
-alias v.cd='cdvirtualenv'
-alias v.cdpack='cdsitepackages'
-alias v.lspack='lssitepackages'
-alias v.add2venv='add2virtualenv'
+#alias v.open='workon'
+#alias v.on='menuvirtualenv'
+#alias v.off='deactivate'
+#alias v.mk='mkvirtualenv --no-site-packages'
+#alias v.mk_withsp='mkvirtualenv'
+#alias v.rm='rmvirtualenv'
+#alias v.cd='cdvirtualenv'
+#alias v.cdpack='cdsitepackages'
+#alias v.lspack='lssitepackages'
+#alias v.add2venv='add2virtualenv'
 
 alias update_all='brew update && brew upgrade && brew doctor && v.open update && pip install --upgrade setuptools && pip install --upgrade pip && v.off'

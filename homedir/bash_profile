@@ -45,13 +45,13 @@ fi
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 # Virtualenv Stuffs:
-if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
-    source virtualenvwrapper.sh
-fi
-
-syspip(){
-   PIP_REQUIRE_VIRTUALENV="" pip "$@"
-}
+#if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
+#    source virtualenvwrapper.sh
+#fi
+#
+#syspip(){
+#   PIP_REQUIRE_VIRTUALENV="" pip "$@"
+#}
 tracedot
 echo ""
 echo ""

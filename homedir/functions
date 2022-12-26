@@ -268,3 +268,19 @@ gifify() {
     echo "proper usage: gifify <input_movie.mov>. You DO need to include extension."
   fi
 }
+
+# `pcd` An improved change directory command that remembers where you have been.
+# Works just like the `cd` command only `pcd` will actually execute `pushd` under the hood.
+# As a result `popd` will always be available when you need it.
+# Usage: `pcd` or `pcd 'location'`
+# Location defaults to `~`
+function pcd
+{
+    if [ $# -eq 0 ]; then
+        pushd ~ > /dev/null
+    elif [ " $1" = " -" ]; then
+        pushd "$OLDPWD" > /dev/null
+    else
+        pushd "$@" > /dev/null
+    fi
+}
